@@ -1,0 +1,131 @@
+*{
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#display {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 3;
+    visibility: hidden;
+}
+
+#store {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(158, 15, 15, 0.5);
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;   
+}
+
+#game {
+    background-color: burlywood;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#enemy {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#enemy-health {
+    outline: 1px solid black;
+    height: 5%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#health-bar {
+    background-color: green;
+    height: 100%;
+    width: 100%;
+}
+
+#enemy-card{
+    outline: 2px solid black;
+    height: 70%;
+    aspect-ratio: 59/86;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: rgb(116, 103, 130);
+}
+
+.enemy-info{
+    outline: 3px outset black;
+    width: 90%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+}
+
+#enemy-card > img {
+    outline: 1px solid black;
+    width: 90%;
+    aspect-ratio: 1/1;
+}
+
+#deck {
+    width: 100%;
+    height: 40%;
+    background-color: rgb(119, 172, 251);
+}
+
+#hand {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    outline: 1px solid black;
+    height: 60%;
+    aspect-ratio: 59/86;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: rgb(116, 103, 130);
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40%;
+}
+
+#store-btn {
+    height: 40%;
+    width: 30%;
+}
+
