@@ -15,12 +15,18 @@
     </div>
     <div id="game">
         <div id="enemy">
-            <div id="enemy-health">
-                <div id="health-bar"></div>
+            <div id="health-cont">
+                <div id="enemy-health">
+                    <div id="health-bar">
+                    </div>
+                </div>
+                <div id="health-value">
+                    10/100
+                </div>
             </div>
             <div id="enemy-card">
                 <h3 id="enemy-name" class="enemy-info">Name</h3>
-                <img src="./assets/images/peng.jpg">
+                <img src="./assets/images/card_images/default.jpeg" id="enemy-img">
                 <h3 id="enemy-lvl" class="enemy-info">Lvl</h3>
             </div>
         </div>
@@ -34,6 +40,8 @@
             </div>
         </div>
     </div>
+    <script src="./src/enemy.js"></script>
     <script src="./src/store.js"></script>
+    <script src="./src/game.js"></script>
 </body>
 </html>
