@@ -1,4 +1,10 @@
 const imagesPath = "../assets/images/card_images/"
+const enemy_card = document.getElementById('enemy-card')
+const enemy_name = document.getElementById('enemy-name')
+const enemy_level = document.getElementById('enemy-lvl')
+const enemy_image = document.getElementById('enemy-img')
+const enemy_hp = document.getElementById('health-value')
+const hp_bar = document.getElementById('health-bar')
 
 //Adjectives
 const adj = [
@@ -40,7 +46,6 @@ const names = [
     'Cell', 'Puppet', 'Lich', 
 ]
 
-
 class Enemy {
     constructor(name, img) {
         this.name = name;
@@ -64,20 +69,20 @@ function genEnemy() {
     }
 }
 
-const enemy_card = document.getElementById('enemy-card')
-const enemy_name = document.getElementById('enemy-name')
-const enemy_level = document.getElementById('enemy-lvl')
-const enemy_image = document.getElementById('enemy-img')
-const enemy_hp = document.getElementById('health-value')
+function updateEnemy(enemy, lvl) {
 
-function updateEnemy(enemy, health, lvl) {
     enemy_name.innerText = enemy.name
     enemy_image.src = enemy.image
     enemy_level.innerText = 'Lvl: ' + lvl
+
+    const health = Math.floor(10 * 1.5 ** lvl)
     enemy_hp.innerText = health
 
-    enemy_image.onerror = function () {
+    enemy_image.onerror = function () { // If no image exists go to default
         enemy_image.src = imagesPath + 'default.jpeg';
     };
     
+    hp_bar.style.width = '100%'
+
+    return health
 }
