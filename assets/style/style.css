@@ -21,15 +21,6 @@ body {
     visibility: hidden;
 }
 
-#store {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(158, 15, 15, 0.5);
-    position: absolute;
-    z-index: 2;
-    visibility: hidden;   
-}
-
 #game {
     background-color: burlywood;
     height: 100%;

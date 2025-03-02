@@ -1,0 +1,37 @@
+#store {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    flex-direction: column;
+}
+
+#store-info {
+    outline: 1px solid red;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#store-info > #coin {
+    color: white;
+    margin: 0;
+}
+
+#pack-display{
+    background: white;
+    height: 70%;
+    width: 100%;
+}
+
+#upgrade-display{
+    height: 20%;
+}
+

@@ -9,7 +9,7 @@ const hp_bar = document.getElementById('health-bar')
 const coin_display = document.getElementById('coin')
 
 // ==== Player Vars =====
-let level = 0 
+let level = 0
 let clickMod = 1
 let coin = 0
 
@@ -22,8 +22,11 @@ function reward() {
 } 
 
 function game() {
-   health = loadEnemy() 
-   combat(health) 
+    if (level === 58) {
+        console.log('Game Over')
+    } 
+    health = loadEnemy() 
+    combat(health) 
    
 }
 
