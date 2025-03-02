@@ -1,42 +1,34 @@
 //Adjectives
 const adj = [
-    'Big',  'Ice', 'Mad','Old', 'Skeletal', 'Twilight',
-    'Bald', 'Dangerous', 'Dire', 'Molten', 'Robot',
-    'Slimey', 'Wet', 'Hairy', 'Demonic', 'Wild', 'Evil', 
-    'Starved', 'Electric', 'Drunk', 'Young', 'Thick', 
-    'Paper', 'Heavenly', 'Earthly', 'Liquid', 'Magical',
-    'Holy', 'Unholy', 'Possessed', 'Deadly', 'Superior', 
-    'Aquatic', 'Ascended', 'Primal', 'Celestial', 
-    'Evolved', 'Steel', 'Golden', 'Perfect', 'Storm',
-    'Platinum', 'Crystal', 'Glass', 'Wooden', 
-    'Twisted', 'Glitched', 'Mega', 'Anti', 'Space',
-    'Alpha', 'Shadow', 'Beta', 'Ultra', 'Pale', 'Radioactive', 
-    'Battle', 'Rotted', 'Dark', 'Light', 'Negative', 
-    'Interdimensional', 'Massive', 'Black', 'White', 
-    'Night', 'Undead', 'Ancient', 'Rare', 'Psychic',
-    'Exotic', 'Universal', 'Galatic', 'Dr.', 'Armored',
-    'Cyborg', 'Ancestral', 'Italian', 'Buff',
-    'Organic', 'Death', 'Mecha', 'Soul', 'Rainbow', 
-    'Stone', 'Fire', 'Common', 'Elemental'
+    'Colossal', 'Frozen', 'Chaos', 'Skeletal', 'Twilight',
+    'Molten', 'Slimy', 'Hairy', 'Unholy', 'Elder',
+    'Electric', 'Drunk', 'Juvenile', 'Paper', 'Holy', 
+    'Earthen', 'Arcane','Deadly', 'Feral', 'Metal',
+    'Aquatic', 'Primal', 'Celestial', 'Evolved',  
+    'Storm', 'Crystal', 'Wooden', 'Hallucinogenic',
+    'Glitched', 'Shadow', 'Pale', 'Quantum',
+    'Radioactive', 'Battle', 'Void', 'Parasitic',
+    'Elemental', 'Undead', 'Psychic','Exotic', 'Doctor', 
+    'Cyborg', 'Ancestral', 'Sand', 'Buff','Nature', 
+    'Death', 'Soul', 'Chromatic', 'Stone', 'Flame', 
+    'Eldritch', 'Runic', 'Cartoon', 'Plasma', 'Nightmare',
+    'Obsidian', 'Plastic'
 ]
 
 //Nouns
 const names = [
-    'Rat','Ox','Tiger','Rabbit','Dragon','Snake','Horse',
-    'Goat','Monkey','Roster','Dog','Pig','Frog','Mech',
-    'Dinosaur','Lizard','Wolf','Penguin','Owl','Demon','Angel',
-    'Goblin','Bettle','Bat','Slug','Slime','Bear','Panda','Racoon',
-    'Ninja','Jack Rabbit','Hydra','Basilisk','Stag','Shark','Whale',
-    'Orc','Troll','Dwarf','Elf','Ghost','Ghoul','Hawk',
-    'Zomibe','Guardian','Bandit','Soilder','Alligator','Droid',
-    'Bigfoot','Man','Bandit','God','Monster','Turtle',
-    'Lamma','Golem','Lord','Walker','Rider','Monk',
-    'Biscuit','Spirit','Unkown','Wyvern','Wizzard','Spider','Destroyer',
-    'Vampire','Brother','Knight','Kevin', 'Husky', 'Kraken',
-    'Big Guy','Bucko','Big Dawg', 'Beast', 'Sloth', 
-    'Queen', 'King', 'Door', 'Paladin', 'Swordman', 'Gladiator',
-    'Cell', 'Puppet', 'Lich', 
+    'Rodent','Ox','Tiger','Rabbit','Dragon','Sepent','Stallion',
+    'Ram','Ape','Wolf','Boar','Toad','Robot',
+    'Dinosaur','Penguin','Owl','Demon','Angel',
+    'Goblin','Bug','Bat','Slug','Slime','Bear','Racoon',
+    'Ninja','Tank','Hydra','Army','Stag','Shark','Whale',
+    'Troll','Dwarf','Elf','Ghost','Ghoul','Hawk',
+    'Guardian','Bigfoot', 'God','Turtle','Golem','Walker','Monk', 
+    'Mage','Spider','Destroyer','Vampire','Kraken','Beast', 
+    'Queen', 'King','Paladin','Gladiator','Puppet','Lich','Clown'
 ]
+
+console.log(adj.length, names.length)
 
 function loadEnemy() {
     level++
