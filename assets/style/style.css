@@ -87,6 +87,8 @@ body {
     justify-content: space-evenly;
     flex-direction: column;
     background-color: rgb(116, 103, 130);
+    transition: ease-in-out;
+    transition-duration: 900ms;
 }
 
 .enemy-info{

@@ -54,6 +54,7 @@ function loadEnemy() {
         enemy_level.innerText = 'Lvl: ' + level
         hp_bar.style.width = '100%'
         enemy_hp.innerText = health
+        enemy_card.style.opacity = 100
 
         // Default image if no image exists
         enemy_image.onerror = function () {
