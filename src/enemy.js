@@ -1,11 +1,3 @@
-const imagesPath = "../assets/images/card_images/"
-const enemy_card = document.getElementById('enemy-card')
-const enemy_name = document.getElementById('enemy-name')
-const enemy_level = document.getElementById('enemy-lvl')
-const enemy_image = document.getElementById('enemy-img')
-const enemy_hp = document.getElementById('health-value')
-const hp_bar = document.getElementById('health-bar')
-
 //Adjectives
 const adj = [
     'Big',  'Ice', 'Mad','Old', 'Skeletal', 'Twilight',
@@ -46,43 +38,38 @@ const names = [
     'Cell', 'Puppet', 'Lich', 
 ]
 
-class Enemy {
-    constructor(name, img) {
-        this.name = name;
-        this.img = img;
-    }
-}
+function loadEnemy() {
+    level++
+    health = Math.floor(10 * 1.5 ** level)
 
-function genEnemy() {
     if (adj.length >= 1 & names.length >= 1){
-        const adj_ind = Math.floor(Math.random() * adj.length) // Random index
+
+        // Get random indexs
+        const adj_ind = Math.floor(Math.random() * adj.length) 
         const names_ind = Math.floor(Math.random() * names.length)
         
-        const new_name = adj[adj_ind] + ' ' + names[names_ind]
-        const image = imagesPath + adj[adj_ind] + '_' + names[names_ind] + '.jpeg'
+        // Make new name and image
+        const next_name = adj[adj_ind] + ' ' + names[names_ind] 
+        const next_image = imagesPath + adj[adj_ind] + '_' + names[names_ind] + '.jpeg'
         
-        adj.splice(adj_ind, 1) // Removes elements from their arrays
+        // Removes elements from their arrays
+        adj.splice(adj_ind, 1) 
         names.splice(names_ind, 1)
        
+        // Display new enemy 
+        enemy_name.innerText = next_name
+        enemy_image.src = next_image
+        enemy_level.innerText = 'Lvl: ' + level
+        hp_bar.style.width = '100%'
+        enemy_hp.innerText = health
 
-        return new Enemy(new_name, image)
+        // Default image if no image exists
+        enemy_image.onerror = function () {
+            enemy_image.src = imagesPath + 'default.jpeg';
+        }
     }
-}
-
-function updateEnemy(enemy, lvl) {
-
-    enemy_name.innerText = enemy.name
-    enemy_image.src = enemy.image
-    enemy_level.innerText = 'Lvl: ' + lvl
-
-    const health = Math.floor(10 * 1.5 ** lvl)
-    enemy_hp.innerText = health
-
-    enemy_image.onerror = function () { // If no image exists go to default
-        enemy_image.src = imagesPath + 'default.jpeg';
-    };
-    
-    hp_bar.style.width = '100%'
 
     return health
 }
+
+
