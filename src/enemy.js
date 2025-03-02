@@ -5,7 +5,7 @@ const adj = [
     'Slimey', 'Wet', 'Hairy', 'Demonic', 'Wild', 'Evil', 
     'Starved', 'Electric', 'Drunk', 'Young', 'Thick', 
     'Paper', 'Heavenly', 'Earthly', 'Liquid', 'Magical',
-    'Holy', 'Unholy', 'Possesed', 'Deadly', 'Superior', 
+    'Holy', 'Unholy', 'Possessed', 'Deadly', 'Superior', 
     'Aquatic', 'Ascended', 'Primal', 'Celestial', 
     'Evolved', 'Steel', 'Golden', 'Perfect', 'Storm',
     'Platinum', 'Crystal', 'Glass', 'Wooden', 
@@ -29,9 +29,9 @@ const names = [
     'Ninja','Jack Rabbit','Hydra','Basilisk','Stag','Shark','Whale',
     'Orc','Troll','Dwarf','Elf','Ghost','Ghoul','Hawk',
     'Zomibe','Guardian','Bandit','Soilder','Alligator','Droid',
-    'Big Foot','Man','Saiyan','God','Monster','Turtle',
+    'Bigfoot','Man','Bandit','God','Monster','Turtle',
     'Lamma','Golem','Lord','Walker','Rider','Monk',
-    'Biscut','Spirit','Unkown','Wyvern','Wizzard','Spider','Destroyer',
+    'Biscuit','Spirit','Unkown','Wyvern','Wizzard','Spider','Destroyer',
     'Vampire','Brother','Knight','Kevin', 'Husky', 'Kraken',
     'Big Guy','Bucko','Big Dawg', 'Beast', 'Sloth', 
     'Queen', 'King', 'Door', 'Paladin', 'Swordman', 'Gladiator',
@@ -50,7 +50,7 @@ function loadEnemy() {
         
         // Make new name and image
         const next_name = adj[adj_ind] + ' ' + names[names_ind] 
-        const next_image = imagesPath + adj[adj_ind] + '_' + names[names_ind] + '.jpeg'
+        const next_image = imagesPath + adj[adj_ind] + '_' + names[names_ind] + '.webp'
         
         // Removes elements from their arrays
         adj.splice(adj_ind, 1) 

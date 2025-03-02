@@ -6,6 +6,7 @@ const enemy_level = document.getElementById('enemy-lvl')
 const enemy_image = document.getElementById('enemy-img')
 const enemy_hp = document.getElementById('health-value')
 const hp_bar = document.getElementById('health-bar')
+const coin_display = document.getElementById('coin')
 
 // ==== Player Vars =====
 let level = 0 
@@ -16,9 +17,13 @@ let coin = 0
 let enemy
 let health = 0
 
+function reward() {
+    return Math.floor(5 * Math.log(level + 1) / Math.log(15))
+} 
+
 function game() {
    health = loadEnemy() 
-   combat(health, clickMod) 
+   combat(health) 
    
 }
 

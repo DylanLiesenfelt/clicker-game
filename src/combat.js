@@ -1,25 +1,26 @@
-function checkHealth() {
-    if (health === 0) {
-        reward()
-    } else {
-        requestAnimationFrame(checkHealth)
-    }
-}
-
-
-function combat(health, clickMod) {
-    
+function combat(health) {
     const startHealth = health
-    
-    enemy_card.addEventListener('click', () => { // Click attack
+
+    function clickAttack() { // Click attack function
         if (health > 0) {
-            health = health - 1*clickMod
-            enemy_hp.innerText = health
-            let barWidth = ((health/startHealth) * 100) + '%' 
-            hp_bar.style.width = barWidth
-              
+            health -= 1 * clickMod
+            coin = coin + reward()
+            updateInfo()
         }
-    })
+
+        if (health <= 0) {
+            enemy_card.removeEventListener('click', clickAttack)
+        }
+    }
+
+    function updateInfo() {
+        enemy_hp.innerText = health
+        let barWidth = ((health / startHealth) * 100) + '%'
+        hp_bar.style.width = barWidth
+        coin_display.innerText = coin
+    }
     
-    checkHealth()
+    enemy_card.addEventListener('click', clickAttack)
 }
+
+
