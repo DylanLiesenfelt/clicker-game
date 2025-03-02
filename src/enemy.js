@@ -1,35 +1,3 @@
-//Adjectives
-const adj = [
-    'Colossal', 'Frozen', 'Chaos', 'Skeletal', 'Twilight',
-    'Molten', 'Slimy', 'Hairy', 'Unholy', 'Elder',
-    'Electric', 'Drunk', 'Juvenile', 'Paper', 'Holy', 
-    'Earthen', 'Arcane','Deadly', 'Feral', 'Metal',
-    'Aquatic', 'Primal', 'Celestial', 'Evolved',  
-    'Storm', 'Crystal', 'Wooden', 'Hallucinogenic',
-    'Glitched', 'Shadow', 'Pale', 'Quantum',
-    'Radioactive', 'Battle', 'Void', 'Parasitic',
-    'Elemental', 'Undead', 'Psychic','Exotic', 'Doctor', 
-    'Cyborg', 'Ancestral', 'Sand', 'Buff','Nature', 
-    'Death', 'Soul', 'Chromatic', 'Stone', 'Flame', 
-    'Eldritch', 'Runic', 'Cartoon', 'Plasma', 'Nightmare',
-    'Obsidian', 'Plastic'
-]
-
-//Nouns
-const names = [
-    'Rodent','Ox','Tiger','Rabbit','Dragon','Sepent','Stallion',
-    'Ram','Ape','Wolf','Boar','Toad','Robot',
-    'Dinosaur','Penguin','Owl','Demon','Angel',
-    'Goblin','Bug','Bat','Slug','Slime','Bear','Racoon',
-    'Ninja','Tank','Hydra','Army','Stag','Shark','Whale',
-    'Troll','Dwarf','Elf','Ghost','Ghoul','Hawk',
-    'Guardian','Bigfoot', 'God','Turtle','Golem','Walker','Monk', 
-    'Mage','Spider','Destroyer','Vampire','Kraken','Beast', 
-    'Queen', 'King','Paladin','Gladiator','Puppet','Lich','Clown'
-]
-
-console.log(adj.length, names.length)
-
 function loadEnemy() {
     level++
     health = Math.floor(10 * 1.5 ** level)
