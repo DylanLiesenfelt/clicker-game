@@ -7,8 +7,9 @@ function combat(health) {
             coin += reward()
             
             updateDisplays()
-        } else {
-            endCombat()
+            if (health <= 0) {
+                endCombat()
+            }
         }
     }
 

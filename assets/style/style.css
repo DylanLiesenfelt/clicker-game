@@ -28,12 +28,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
 #enemy {
-    height: 60%;
-    width: 100%;
+    height: 100%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -41,10 +40,10 @@ body {
 }
 
 #health-cont {
-    width: 65%;
-    height: 10%;
+    width: 100%;
+    height: 15%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -52,7 +51,8 @@ body {
 #enemy-health {
     outline: 1px solid black;
     height: 50%;
-    width: 99%;
+    width: 60%;
+    border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -65,12 +65,13 @@ body {
     align-items: center;
     justify-content: center;
     transition: ease-out;
+    border-radius: 1rem;
     transition-duration: 400ms;
 }
 
 #enemy-card{
     outline: 2px solid black;
-    height: 70%;
+    height: 75%;
     aspect-ratio: 59/86;
     border-radius: 0.3rem;
     display: flex;
@@ -99,39 +100,33 @@ body {
 }
 
 #deck {
-    width: 100%;
-    height: 40%;
-    background-color: rgb(119, 172, 251);
-}
-
-#hand {
-    height: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.card {
-    outline: 1px solid black;
-    height: 60%;
-    aspect-ratio: 59/86;
-    border-radius: 0.3rem;
+    width: 60%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    background-color: rgb(116, 103, 130);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#hand {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 #controls {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 40%;
+    height: 10%;
+    width: 100%;
 }
 
 #store-btn {
-    height: 40%;
-    width: 30%;
+    height: 55%;
+    width: 10%;
 }
 
