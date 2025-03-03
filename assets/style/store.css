@@ -4,7 +4,7 @@
     background-color: black;
     position: absolute;
     z-index: 2;
-    visibility: hidden;
+    visibility: visible;
     display: flex;
     align-items: center;
     justify-content: center;   
