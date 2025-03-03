@@ -15,7 +15,7 @@ function combat(health) {
 
     function endCombat() {
         enemy_card.removeEventListener('click', clickAttack) //Disable click event
-        coin += Math.floor((reward() * (level))+1) // Defeating enemy bonus
+        coin += Math.floor((reward() * (level*Math.E))+1) // Defeating enemy bonus
         updateDisplays()
         enemy_card.style.opacity = 0
         setTimeout(() => {
@@ -31,7 +31,7 @@ function combat(health) {
     }
 
     function reward() {
-        return (5 * Math.log(level + 1) / Math.log(15))/100
+        return (5 * Math.log(level + 1) / Math.log(15))/10
     }
 
     enemy_card.addEventListener('click', clickAttack)
