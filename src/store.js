@@ -1,42 +1,21 @@
+// ========== HTML Globals ==========
 const store_display = document.getElementById('store')
 const store_button = document.getElementById('store-btn')
 const exit = document.getElementById('exit-store-btn')
-
 const store_coin = document.getElementById('store-coin')
-
 const pack_display = document.getElementById('pack-display')
 const card_display = document.getElementById('card-display')
-
 const pack1 = document.getElementById("pack1")
 const pack2 = document.getElementById("pack2")
 const pack3 = document.getElementById("pack3")
+const store_card = document.getElementsByClassName('store-card')
 
+// ========= Store Globals ==========
 const libary = makeCardLibary()
 let boosterPacks = []
 
-store_button.addEventListener('click', () => { // Open Store
-    store_display.style.visibility = 'visible'
-    store_coin.innerText = "Coins: " + coin.toFixed(2) //Update coin
-    makeBoosterPack(libary) // Gen booster packs
-})
 
-exit.addEventListener('click', () => {
-    store_display.style.visibility = 'hidden'
-    boosterPacks = [] //clear all packs
-})
-
-pack1.addEventListener('click', () => {
-    displayCards(0)
-})
-
-pack2.addEventListener('click', () => {
-    displayCards(1)
-})
-
-pack3.addEventListener('click', () => {
-    displayCards(2)
-})
-
+//========== Functions ==========
 function makeCardLibary() { // Add all possible cards to a library
 
     const cardLibary = []
@@ -107,6 +86,37 @@ function displayCards(index) {
         card_display.appendChild(card)
     }
 }
+
+// ========= Runtime ===========
+store_button.addEventListener('click', () => { // Open Store
+    store_display.style.visibility = 'visible'
+    store_coin.innerText = "Coins: " + coin.toFixed(2) //Update coin
+    makeBoosterPack(libary) // Gen booster packs
+})
+
+exit.addEventListener('click', () => {
+    store_display.style.visibility = 'hidden'
+    boosterPacks = [] //clear all packs
+})
+
+pack1.addEventListener('click', () => {
+    displayCards(0)
+    exit.style.visibility = 'hidden'
+})
+
+pack2.addEventListener('click', () => {
+    displayCards(1)
+    exit.style.visibility = 'hidden'
+})
+
+pack3.addEventListener('click', () => {
+    displayCards(2)
+    exit.style.visibility = 'hidden'
+})
+
+store_card.addEventListener('click', () => {
+    console.log('Clicked')
+})
 
 
 
