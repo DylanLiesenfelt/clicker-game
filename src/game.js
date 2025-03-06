@@ -7,6 +7,7 @@ const enemy_image = document.getElementById('enemy-img')
 const enemy_hp = document.getElementById('health-value')
 const hp_bar = document.getElementById('health-bar')
 const coin_display = document.getElementById('coin')
+const hand = document.getElementById('hand')
 
 // ===== Lists =====
 //Adjectives

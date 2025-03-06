@@ -8,12 +8,10 @@ const card_display = document.getElementById('card-display')
 const pack1 = document.getElementById("pack1")
 const pack2 = document.getElementById("pack2")
 const pack3 = document.getElementById("pack3")
-const store_card = document.getElementsByClassName('store-card')
 
 // ========= Store Globals ==========
 const libary = makeCardLibary()
 let boosterPacks = []
-
 
 //========== Functions ==========
 function makeCardLibary() { // Add all possible cards to a library
@@ -33,7 +31,8 @@ function makeCardLibary() { // Add all possible cards to a library
     return cardLibary
 }
 
-function makeBoosterPack(lib) {
+function makeBoosterPack(lib) { // Creates boosters packs 
+    pack_display.style.visibility = 'visible'
 
     for (let i = 0; i<3; i++) { //take the cards and and add them  
 
@@ -84,24 +83,45 @@ function displayCards(index) {
         card.appendChild(img)
         
         card_display.appendChild(card)
+
+        card.addEventListener('click', () => {
+            hand.appendChild(card)
+            // Change displays
+            pack_display.style.visibility = 'visible'
+            pack_display.style.position = 'relative'
+            card_display.style.visibility = 'hidden'
+            card_display.style.position = 'absolute'
+            exit.style.visibility = 'visible'
+        })
     }
+
+    
 }
 
 // ========= Runtime ===========
 store_button.addEventListener('click', () => { // Open Store
     store_display.style.visibility = 'visible'
     store_coin.innerText = "Coins: " + coin.toFixed(2) //Update coin
-    makeBoosterPack(libary) // Gen booster packs
+    makeBoosterPack(libary) // Gen booster packs 
 })
 
 exit.addEventListener('click', () => {
     store_display.style.visibility = 'hidden'
+    pack_display.style.visibility = 'hidden'
     boosterPacks = [] //clear all packs
 })
 
 pack1.addEventListener('click', () => {
-    displayCards(0)
-    exit.style.visibility = 'hidden'
+    if (coin >= 15){
+        displayCards(0)
+        coin = coin - 15
+        store_coin.innerText = 'Coins: ' + coin.toFixed(2)
+        coin_display.innerText = 'Coins: ' + coin.toFixed(2)
+        exit.style.visibility = 'hidden'
+    } else {
+        console.log('Not enough coin')
+    }
+    
 })
 
 pack2.addEventListener('click', () => {
@@ -112,10 +132,6 @@ pack2.addEventListener('click', () => {
 pack3.addEventListener('click', () => {
     displayCards(2)
     exit.style.visibility = 'hidden'
-})
-
-store_card.addEventListener('click', () => {
-    console.log('Clicked')
 })
 
 
