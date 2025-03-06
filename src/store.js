@@ -92,6 +92,7 @@ function displayCards(index) {
             card_display.style.visibility = 'hidden'
             card_display.style.position = 'absolute'
             exit.style.visibility = 'visible'
+            card_display.innerHTML = ''
         })
     }
 
@@ -112,28 +113,52 @@ exit.addEventListener('click', () => {
 })
 
 pack1.addEventListener('click', () => {
+    
     if (coin >= 15){
         displayCards(0)
         coin = coin - 15
         store_coin.innerText = 'Coins: ' + coin.toFixed(2)
         coin_display.innerText = 'Coins: ' + coin.toFixed(2)
         exit.style.visibility = 'hidden'
-    } else {
+    } 
+    
+    else {
         console.log('Not enough coin')
     }
     
 })
 
 pack2.addEventListener('click', () => {
-    displayCards(1)
-    exit.style.visibility = 'hidden'
+    
+    if (coin >= 15){
+        displayCards(1)
+        coin = coin - 15
+        store_coin.innerText = 'Coins: ' + coin.toFixed(2)
+        coin_display.innerText = 'Coins: ' + coin.toFixed(2)
+        exit.style.visibility = 'hidden'
+    } 
+    
+    else {
+        console.log('Not enough coin')
+    }
+    
 })
 
 pack3.addEventListener('click', () => {
-    displayCards(2)
-    exit.style.visibility = 'hidden'
+    
+    if (coin >= 15){
+        displayCards(2)
+        coin = coin - 15
+        store_coin.innerText = 'Coins: ' + coin.toFixed(2)
+        coin_display.innerText = 'Coins: ' + coin.toFixed(2)
+        exit.style.visibility = 'hidden'
+    } 
+    
+    else {
+        console.log('Not enough coin')
+    }
+    
 })
-
 
 
 
