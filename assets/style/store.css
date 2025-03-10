@@ -33,10 +33,10 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: white;
+    background-color: rgb(185, 185, 185);
 }
 
-.store-card {
+.booster-card {
     height: 70%;
     aspect-ratio: 59/86;
     border-radius: 0.25rem;
@@ -44,13 +44,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     outline: 1px solid black;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.7);
 }
 
-.store-card > div {
-    margin-bottom: 15%;
+.booster-card > div {
     border: 2px outset;
     background-color: grey;
     padding: 3%;
@@ -58,7 +57,7 @@
     text-align: center;
 }
 
-.store-card > img {
+.booster-card > img {
     outline: 1px solid black;
     width: 90%;
     aspect-ratio: 1/1;

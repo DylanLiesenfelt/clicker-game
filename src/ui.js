@@ -8,15 +8,15 @@ const enemy_hp = document.getElementById('health-value')
 const hp_bar = document.getElementById('health-bar')
 const coin_display = document.getElementById('coin')
 const hand = document.getElementById('hand')
-const store_display = document.getElementById('store')
+const store = document.getElementById('store')
 const store_button = document.getElementById('store-btn')
 const store_exit = document.getElementById('exit-store-btn')
 const store_coin = document.getElementById('store-coin')
 const pack_display = document.getElementById('pack-display')
 const card_display = document.getElementById('card-display')
-const pack1 = document.getElementById("pack1")
-const pack2 = document.getElementById("pack2")
-const pack3 = document.getElementById("pack3")
+const pack1_display = document.getElementById("pack1")
+const pack2_display = document.getElementById("pack2")
+const pack3_display = document.getElementById("pack3")
 
 // ===== Updaters =====
 function updateName(name) {
@@ -46,6 +46,7 @@ function updateHealthBar(width) {
 
 function updateCoin(coins) {
     coin_display.innerText = 'Coins: ' + coins
+    store_coin.innerText = 'Coins: ' + coins
 }
 
 function reward(base) {
@@ -57,3 +58,6 @@ function updateCardOpacity(val) {
     enemy_card.style.opacity = val + '%'
 }
 
+function getRandomLibraryIndex() {
+    return Math.floor(libary.length * Math.random())
+}

@@ -4,7 +4,7 @@ let coinMulti = 1
 let clickPower = 1
 let attackPower = 0
 let attackSpeed = 0
-let cardHand = []
+let playerHand = []
 
 // ===== Enemy Variables =====
 let enemyLevel = 0
@@ -50,7 +50,7 @@ function newEnemy() {
     maxHealth = Math.floor(20 * Math.pow(enemyLevel, 1.3))
     currentHealth = maxHealth
     // Pull New Enemy
-    index = Math.floor(combatLibrary.length * Math.random())
+    index = getRandomLibraryIndex()
     enemy = combatLibrary[index] // Pull random card from combat deck
     combatLibrary.splice(index, 1) // Remove that card from the lib
     // Display
@@ -61,8 +61,6 @@ function newEnemy() {
     updateHealthBar(100)
     updateCardOpacity(100)
 }
-
-
 
 function clickDamage() {
     reward(1)

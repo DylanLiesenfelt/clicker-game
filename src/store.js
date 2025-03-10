@@ -1,0 +1,114 @@
+// ========= Global Vars ===========
+let packPrice = 15
+let pack1 = []
+let pack2 = []
+let pack3 = []
+let boosterCard1
+let boosterCard2
+let boosterCard3
+let boosterCard4
+let boosterCard5
+
+//====== Functions ======
+function makeBooster() {
+    const pack = []
+    //Pull 5 random cards from library for the booster pack
+    for (i=0; i<5; i++) { 
+        index = getRandomLibraryIndex()
+        pack.push(libary[index])
+    } 
+
+    return pack
+}
+
+function openBooster(pack) {
+    store_exit.style.visibility = 'hidden' 
+    // Change display
+    card_display.style.visibility = 'visible'
+    card_display.style.position = 'relative'
+    pack_display.style.visibility = 'hidden'
+    pack_display.style.position = 'absolute'
+    // Render Cards
+    for (i=0; i<pack.length; i++) {
+        makeBoosterCard(pack[i], i+1)
+    }
+    boosterCard1 = pack[0]
+    boosterCard2 = pack[1]
+    boosterCard3 = pack[2]
+    boosterCard4 = pack[3]
+    boosterCard5 = pack[4]
+}
+
+function makeBoosterCard(card, num) {
+    //Make card element
+    const booster_card = document.createElement('div')
+    booster_card.id = 'booster-card' + num 
+    booster_card.className = 'booster-card'
+    //Make card name
+    const card_header = document.createElement('div')
+    card_header.innerText = card.name
+    //Make card image
+    const card_image = document.createElement('img')
+    card_image.src = card.image
+    //Make card card level
+    const card_level = document.createElement('div')
+    card_level.innerText = 'Lvl: ' + card.level
+    //Put card together
+    booster_card.appendChild(card_header)
+    booster_card.appendChild(card_image)
+    booster_card.appendChild(card_level)
+    //Display everything
+    card_display.appendChild(booster_card)
+    //Add clcick event
+    booster_card.addEventListener('click', () => buyBoosterCard(card))
+}
+
+function buyBoosterCard(card) {
+    //Add card to player hand
+    playerHand.push(card)
+    //Reset store
+    resetStore()
+    // New Boosters
+    pack1 = makeBooster()
+    pack2 = makeBooster()
+    pack3 = makeBooster()
+}
+
+function resetStore() {
+    store_exit.style.visibility = 'visible' 
+    card_display.style.visibility = 'hidden'
+    card_display.style.position = 'absolute'
+    pack_display.style.visibility = 'visible'
+    pack_display.style.position = 'relative'
+    card_display.innerHTML = '';
+
+    pack1 = []
+    pack2 = []
+    pack3 = []
+    boosterCard1 = []
+    boosterCard2 = []
+    boosterCard3 = []
+    boosterCard4 = []
+    boosterCard5 = []
+}
+
+//====== Event Listners =====
+store_button.addEventListener('click', () => {
+    store.style.visibility = 'visible'
+    resetStore()
+    pack1 = makeBooster()
+    pack2 = makeBooster()
+    pack3 = makeBooster()
+})
+
+store_exit.addEventListener('click', () => {
+    store.style.visibility = 'hidden'
+    resetStore()
+    pack_display.style.visibility = 'hidden'
+    store_exit.style.visibility = 'hidden' 
+})
+
+pack1_display.addEventListener('click', () => openBooster(pack1))
+pack2_display.addEventListener('click', () =>  openBooster(pack2))
+pack3_display.addEventListener('click', () => openBooster(pack3))
+
