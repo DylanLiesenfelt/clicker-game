@@ -98,4 +98,11 @@
     height: 20%;
 }
 
+.pack-price {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    font-family: sans-serif;
+    text-shadow: 0 0 5px red;
+}
+
 

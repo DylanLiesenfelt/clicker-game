@@ -17,26 +17,31 @@ function makeBooster() {
         index = getRandomLibraryIndex()
         pack.push(libary[index])
     } 
-
     return pack
 }
 
 function openBooster(pack) {
-    store_exit.style.visibility = 'hidden' 
-    // Change display
-    card_display.style.visibility = 'visible'
-    card_display.style.position = 'relative'
-    pack_display.style.visibility = 'hidden'
-    pack_display.style.position = 'absolute'
-    // Render Cards
-    for (i=0; i<pack.length; i++) {
-        makeBoosterCard(pack[i], i+1)
+    if (coins >= packPrice) {
+        store_exit.style.visibility = 'hidden' 
+        // Change display
+        card_display.style.visibility = 'visible'
+        card_display.style.position = 'relative'
+        pack_display.style.visibility = 'hidden'
+        pack_display.style.position = 'absolute'
+        // Render Cards
+        for (i=0; i<pack.length; i++) {
+            makeBoosterCard(pack[i], i+1)
+        }
+        boosterCard1 = pack[0]
+        boosterCard2 = pack[1]
+        boosterCard3 = pack[2]
+        boosterCard4 = pack[3]
+        boosterCard5 = pack[4]
+        coins -= packPrice
+        updateCoin(coins)
+    } else {
+        console.log('No Money')
     }
-    boosterCard1 = pack[0]
-    boosterCard2 = pack[1]
-    boosterCard3 = pack[2]
-    boosterCard4 = pack[3]
-    boosterCard5 = pack[4]
 }
 
 function makeBoosterCard(card, num) {
@@ -72,6 +77,9 @@ function buyBoosterCard(card) {
     pack1 = makeBooster()
     pack2 = makeBooster()
     pack3 = makeBooster()
+    // Change price pack
+    packPrice += 2
+    updatePackPrice(packPrice)
 }
 
 function addCardToHand(card) {
@@ -116,6 +124,10 @@ function updateAttackPower() {
     }
 
     attackPower = levelTotal
+    
+    if (isAutoAttacking === false) {
+        autoAttack()
+    }
 }
 
 function resetStore() {

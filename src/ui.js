@@ -17,6 +17,7 @@ const card_display = document.getElementById('card-display')
 const pack1_display = document.getElementById("pack1")
 const pack2_display = document.getElementById("pack2")
 const pack3_display = document.getElementById("pack3")
+const pack_price = document.getElementsByClassName('pack-price') 
 
 // ===== Updaters =====
 function updateName(name) {
@@ -57,6 +58,14 @@ function reward(base) {
 function updateCardOpacity(val) {
     enemy_card.style.opacity = val + '%'
 }
+
+function updatePackPrice(price) {
+    const pack_price = document.getElementsByClassName('pack-price');
+    for (let i = 0; i < pack_price.length; i++) {
+        pack_price[i].innerText = price + ' Coins'; 
+    }
+}
+
 
 function getRandomLibraryIndex() {
     return Math.floor(libary.length * Math.random())
