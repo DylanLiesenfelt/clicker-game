@@ -106,7 +106,16 @@ function addCardToHand(card) {
         //Display card
         hand.appendChild(player_card)
     }
-    
+    updateAttackPower()   
+}
+
+function updateAttackPower() {
+    let levelTotal = 0
+    for(i=0; i<playerHand.length; i++) {
+        levelTotal += playerHand[i].level
+    }
+
+    attackPower = levelTotal
 }
 
 function resetStore() {

@@ -3,7 +3,8 @@ let coins = 0
 let coinMulti = 1
 let clickPower = 1
 let attackPower = 0
-let attackSpeed = 0
+let attackSpeed = 1
+let isAutoAttacking = false
 let playerHand = []
 
 // ===== Enemy Variables =====
@@ -60,6 +61,8 @@ function newEnemy() {
     updateHealth(maxHealth)
     updateHealthBar(100)
     updateCardOpacity(100)
+    // Start Auto Attack
+    autoAttack()
 }
 
 function clickDamage() {
@@ -70,19 +73,41 @@ function clickDamage() {
     updateHealthBar((currentHealth/maxHealth) * 100) 
     // Checks if enemy is dead
     if (currentHealth <= 0) { 
-        enemy_card.removeEventListener('click', clickDamage)
-        reward(10 * enemyLevel)
-        updateCardOpacity(0)
-        // Pull new enemy, reset game loop
-        setTimeout(() => {
-            newEnemy()
-            enemy_card.addEventListener('click', clickDamage)
-        }, 1000)
-    } 
-    
-    else {
+        enemyDefeated()
+    } else {
         return
     }
+}
+
+function autoAttack() {
+    if (isAutoAttacking) return;
+    isAutoAttacking = true;
+
+    function attackLoop() {
+        if (attackPower > 0 && currentHealth > 0) {
+            currentHealth -= attackPower;
+            updateHealth(currentHealth);
+            updateHealthBar((currentHealth / maxHealth) * 100);
+            setTimeout(attackLoop, attackSpeed * 1000);
+        } else {
+            isAutoAttacking = false; 
+            if (currentHealth <= 0) enemyDefeated();
+        }
+    }
+
+    attackLoop(); 
+}
+
+
+function enemyDefeated() {
+    isAutoAttacking = false; // Stop attacking when enemy is dead
+    enemy_card.removeEventListener('click', clickDamage);
+    reward(10 * enemyLevel);
+    updateCardOpacity(0);
+    setTimeout(() => {
+        newEnemy();
+        enemy_card.addEventListener('click', clickDamage);
+    }, 1000);
 }
 
 // ========== Runtime ============
