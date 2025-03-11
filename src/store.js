@@ -65,13 +65,48 @@ function makeBoosterCard(card, num) {
 
 function buyBoosterCard(card) {
     //Add card to player hand
-    playerHand.push(card)
+    addCardToHand(card)
     //Reset store
     resetStore()
-    // New Boosters
+    //New Boosters
     pack1 = makeBooster()
     pack2 = makeBooster()
     pack3 = makeBooster()
+}
+
+function addCardToHand(card) {
+    const cardID = card.adj + '_' + card.noun
+    //Find card in hand
+    const foundCard = playerHand.find(c => c.name === card.name)
+    //Add to hand
+    if (foundCard) {
+        foundCard.level += 1
+        document.getElementById(cardID + '-' + 'header').innerText = 'Lvl: ' + foundCard.level
+    }
+    else {
+        playerHand.push(card)
+        //Make Card
+        const player_card = document.createElement('div')
+        player_card.className = 'player-card'
+        player_card.id = cardID
+        //Make header
+        const card_header = document.createElement('div')
+        card_header.innerText = card.name
+        //Make card image
+        const card_image = document.createElement('img')
+        card_image.src = card.image
+        //Make card card level
+        const card_level = document.createElement('div')
+        card_level.id = cardID + '-' + 'header'
+        card_level.innerText = 'Lvl: ' + card.level
+        //Build card
+        player_card.appendChild(card_header)
+        player_card.appendChild(card_image)
+        player_card.appendChild(card_level)
+        //Display card
+        hand.appendChild(player_card)
+    }
+    
 }
 
 function resetStore() {
@@ -111,4 +146,3 @@ store_exit.addEventListener('click', () => {
 pack1_display.addEventListener('click', () => openBooster(pack1))
 pack2_display.addEventListener('click', () =>  openBooster(pack2))
 pack3_display.addEventListener('click', () => openBooster(pack3))
-
