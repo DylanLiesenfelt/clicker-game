@@ -12,13 +12,17 @@ body {
     flex-direction: column;
 }
 
-#display {
+#start-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    z-index: 3;
-    visibility: hidden;
+}
+
+#new-game-btn {
+    height: 50px;
 }
 
 #game {
@@ -28,6 +32,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
+    position: absolute;
 }
 
 #enemy {

@@ -124,4 +124,12 @@ function main() {
     enemy_card.addEventListener('click', clickDamage)
 }
 
-main()
+new_game_btn.addEventListener('click', () => {
+    start_screen.style.visibility = 'hidden'
+    start_screen.style.position = 'absolute'
+
+    game_display.style.visibility = 'visible'
+    game_display.style.position = 'relative'
+
+    main()
+})

@@ -1,1 +1,3 @@
-cookie clicker rouge-like deck builder
+
+## License
+![](LICENSE.TXT)

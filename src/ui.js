@@ -24,6 +24,9 @@ const click_upgrade = document.getElementById('click-upgrade')
 const click_upgrade_btn = document.getElementById('click-btn')
 const speed_upgrade = document.getElementById('speed-upgrade')
 const speed_upgrade_btn = document.getElementById('speed-btn')
+const start_screen = document.getElementById('start-menu')
+const new_game_btn = document.getElementById('new-game-btn')
+const game_display = document.getElementById('game')
 
 // ===== Updaters =====
 function updateName(name) {

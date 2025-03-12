@@ -1,0 +1,60 @@
+MITIGATION LICENSE (Custom Non-Commercial, No Redistribution License)
+=====================================================================
+
+Copyright © 2025 Dylan Liesenfelt
+
+This project is provided **for personal and non-commercial use only**, subject to the terms below.
+
+---
+
+1. **Non-Commercial Use Only**
+
+Permission is granted to use, copy, modify, and share this project **for personal, educational, and non-commercial purposes only**.
+
+**Commercial use of any part of this project is strictly prohibited without prior written consent from Dylan Liesenfelt or respective content creators.**
+
+---
+
+2. **No Redistribution for Profit**
+
+You are **prohibited** from selling, sublicensing, or redistributing this project or any part thereof for profit. This includes, but is not limited to:
+- Selling or reselling the project, or any derivative works.
+- Including the project or assets in any paid product or service.
+- Monetizing content derived from this project (e.g., NFTs, merchandise, commercial games).
+
+---
+
+3. **Community-Contributed Artwork and Assets**
+
+All artwork, music, and creative assets contributed by community members remain the **exclusive property of their respective creators**.
+
+Community-contributed content is provided **solely for use within this project** and may **not be reused, modified, or distributed outside the project without the explicit consent of the original creator**.
+
+Respect for the creators' rights is **mandatory** and **enforced as a condition of use** of this project.
+
+---
+
+4. **Respect and Attribution**
+
+You must respect the rights of all contributors. If you share or showcase your own adaptations of this project (within these terms), you must provide **clear attribution** to the original creators, including Dylan Liesenfelt and any contributing artists, unless otherwise agreed.
+
+---
+
+5. **No Warranty**
+
+This project is provided "as is" without warranty of any kind. The authors are not liable for any damages or losses arising from the use of this project.
+
+---
+
+6. **Contact for Permissions**
+
+For permissions beyond the scope of this license, including commercial inquiries, redistribution, or external use of community-contributed assets, contact:
+
+Dylan Liesenfelt:
+
+dylanliesenfelt@proton.me
+www.liesenfelt.net
+
+---
+
+END OF TERMS
