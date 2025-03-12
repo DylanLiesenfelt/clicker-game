@@ -42,7 +42,7 @@ function updateImage(img) {
 
     // Default image if image does not exist at path
     enemy_image.onerror = function () {
-        enemy_image.src = imagesPath + 'default.jpeg';
+        enemy_image.src = imagesPath + 'default.webp';
     }
 }
 
@@ -50,7 +50,6 @@ function updateHealth(hp) {
     if (hp < 0 ) {
         hp = 0
     }
-    
     enemy_hp.innerText = hp
 }
 
