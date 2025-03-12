@@ -18,6 +18,12 @@ const pack1_display = document.getElementById("pack1")
 const pack2_display = document.getElementById("pack2")
 const pack3_display = document.getElementById("pack3")
 const pack_price = document.getElementsByClassName('pack-price') 
+const coin_upgrade = document.getElementById('coin-upgrade')
+const coin_upgrade_btn = document.getElementById('coin-btn')
+const click_upgrade = document.getElementById('click-upgrade')
+const click_upgrade_btn = document.getElementById('click-btn')
+const speed_upgrade = document.getElementById('speed-upgrade')
+const speed_upgrade_btn = document.getElementById('speed-btn')
 
 // ===== Updaters =====
 function updateName(name) {
@@ -38,6 +44,10 @@ function updateImage(img) {
 }
 
 function updateHealth(hp) {
+    if (hp < 0 ) {
+        hp = 0
+    }
+    
     enemy_hp.innerText = hp
 }
 

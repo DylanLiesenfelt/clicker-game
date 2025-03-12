@@ -1,11 +1,18 @@
 // ===== Player Variables =====
 let coins = 0
 let coinMulti = 1
+let coinModPrice = 50
+
 let clickPower = 1
-let attackPower = 0
+let clickModPrice = 50
+
 let attackSpeed = 1
-let isAutoAttacking = false
+let speedLevel = 1
+let speedModPrice = 50
+
 let playerHand = []
+let attackPower = 0
+let isAutoAttacking = false
 
 // ===== Enemy Variables =====
 let enemyLevel = 0
@@ -72,7 +79,7 @@ function clickDamage() {
     updateHealth(currentHealth)
     updateHealthBar((currentHealth/maxHealth) * 100) 
     // Checks if enemy is dead
-    if (currentHealth <= 0) { 
+    if (currentHealth <= 0 && isAutoAttacking === false) { 
         enemyDefeated()
     } else {
         return

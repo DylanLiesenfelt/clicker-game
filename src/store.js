@@ -167,3 +167,48 @@ store_exit.addEventListener('click', () => {
 pack1_display.addEventListener('click', () => openBooster(pack1))
 pack2_display.addEventListener('click', () =>  openBooster(pack2))
 pack3_display.addEventListener('click', () => openBooster(pack3))
+
+speed_upgrade_btn.addEventListener('click', () => {
+    if (coins >= speedModPrice) {
+        attackSpeed = attackSpeed - 0.25
+
+        isAutoAttacking = false
+        autoAttack()
+
+        coins = coins - speedModPrice
+        updateCoin(coins)
+
+        speedModPrice /= 0.25
+        speedLevel++
+        speed_upgrade.innerText = 'Speed Mod: ' + speedLevel
+        speed_upgrade_btn.innerText = speedModPrice + ' Coins'
+    }
+})
+
+coin_upgrade_btn.addEventListener('click', () => {
+    if (coins >= coinModPrice) {
+
+        coins = coins - coinModPrice
+        updateCoin(coins)
+
+        coinModPrice /= 0.25
+        coinMulti++
+
+        coin_upgrade.innerText = 'Coin Mod: ' + coinMulti
+        coin_upgrade_btn.innerText = coinModPrice + ' Coins'
+    }    
+})
+
+click_upgrade_btn.addEventListener('click', () => {
+    if (coins >= clickModPrice) {
+
+        coins = coins - clickModPrice
+        updateCoin(coins)
+
+        clickModPrice /= 0.25
+        clickPower++
+
+        click_upgrade.innerText = 'Click Mod: ' + clickPower
+        click_upgrade_btn.innerText = clickModPrice + ' Coins'
+    }    
+})
