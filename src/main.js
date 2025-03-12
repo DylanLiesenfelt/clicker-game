@@ -38,7 +38,7 @@ class Card {
         this.noun = noun
         this.name = adj + ' ' + noun
         this.level = level
-        this.image = "./assets/images/card_images/" + adj + '_' + noun + '.webp'
+        this.image = "/assets/images/card_images/" + adj + '_' + noun + '.webp'
     }
 }
 

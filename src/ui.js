@@ -1,5 +1,5 @@
 // ========== Globals ==========
-const imagesPath = "../assets/images/card_images/"
+const imagesPath = "/assets/images/card_images/"
 const enemy_card = document.getElementById('enemy-card')
 const enemy_name = document.getElementById('enemy-name')
 const enemy_level = document.getElementById('enemy-lvl')
