@@ -1,3 +1,3 @@
+A cookie clicker card collection game. 
 
-## License
-![](LICENSE.TXT)
+The end goal is to be a community driven art gallery with an interactive game
